@@ -1,0 +1,87 @@
+
+/* Base color scheme: soft dark IDE-like style */
+body {
+  background-color: #1e1e1e;
+  color: #e0e0c7;
+  font-family: 'Fira Code', 'Menlo', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 2rem;
+}
+
+/* Card container */
+.card.formio-form {
+  background-color: #2a2a2a !important;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border: none;
+}
+
+/* Headings */
+.formio-form h1, .formio-form h2, .formio-form h3 {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Input fields */
+.form-control {
+  background-color: #1e1e1e !important;
+  color: #e0e0c7 !important;
+  border: 1px solid #444 !important;
+  border-radius: 6px;
+}
+
+.form-control:focus {
+  border-color: #60aaff !important;
+  box-shadow: 0 0 5px #60aaff88;
+}
+
+/* Labels */
+.control-label {
+  color: #cccccc !important;
+  font-size: 13px;
+}
+
+/* Submit button */
+.btn-primary {
+  background-color: #60aaff !important;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #4a8fd8 !important;
+}
+
+/* Placeholder text */
+::placeholder {
+  color: #888 !important;
+  opacity: 0.9;
+}
+
+/* Normalize input border-radius */
+input, select, textarea {
+  border-radius: 4px !important;
+}
+
+.intro {
+  font-size: 14px;   /* Valeur en pixels */
+  font-weight: 300;
+  line-height: 1.6;
+  color: #d8d8d8;
+  max-width: 750px;
+  margin: 0 auto 2rem;
+  font-family: 'Helvetica Neue', 'Fira Code', sans-serif;
+}
+
+h1 {
+  font-size: 24px; /* ~1.5rem */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+h1 i {
+  display: none;
+}
