@@ -1,0 +1,176 @@
+---
+layout: "../layouts/Layout.astro";
+title: "Join the OB1 Forum";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Join the OB1 Forum</title>
+    <style>
+      body {
+        background-color: #0f1116;
+        color: #e4e4e7;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+      header {
+        background-color: #0f1116;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+      }
+      header a {
+        color: #f0f6fc;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+      main {
+        max-width: 640px;
+        margin: 3rem auto;
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: white;
+      }
+      p.intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        color: #cdd0d4;
+      }
+      label {
+        display: block;
+        margin-top: 1.5rem;
+        font-weight: normal;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #1c1f26;
+        color: #f4f4f5;
+      }
+      button {
+        margin-top: 2rem;
+        padding: 0.75rem 1.5rem;
+        background-color: #16a34a;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/blog">Blog</a>
+      <a href="/forum">Forum</a>
+    </header>
+    <main>
+      <h1>Join the OB1 Forum</h1>
+      <p class="intro">
+        OB1 stands for "Obekväm arbetstid" in Swedish – inconvenient working
+        hours. It refers to those working unsocial shifts (nights, weekends) and
+        often with limited legal protections. This space was born from lived
+        experience – as a dishwasher in Malmö, winter 2024. OB1 exists to help
+        people facing abuse or legal uncertainty at work find each other, share
+        strategies, and solve real problems together.
+      </p>
+      <form method="POST" action="#">
+        <label>
+          Would you prefer someone from OB1 to call you directly instead of
+          filling out this form?
+          <select name="callInstead">
+            <option value="">Yes / No</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+        <label
+          >First name
+          <input type="text" name="firstname" />
+        </label>
+        <label
+          >Email
+          <input type="email" name="email" />
+        </label>
+        <label
+          >Phone number (optional, if you want us to call you)
+          <input type="text" name="phone" />
+        </label>
+        <label
+          >Age
+          <input type="number" name="age" />
+        </label>
+        <label
+          >Gender
+          <select name="gender">
+            <option>Man</option>
+            <option>Woman</option>
+            <option>Prefer not to say</option>
+          </select>
+        </label>
+        <label
+          >Nationality
+          <input type="text" name="nationality" />
+        </label>
+        <label
+          >Sectors you’ve worked in (check all that apply)
+          <textarea
+            name="sectors"
+            rows="2"
+            placeholder="e.g. Restaurant – Cleaner, Logistics, Delivery, Legal, Syndicalist"
+          ></textarea>
+        </label>
+        <label
+          >Where did you work and experience problems?
+          <textarea name="where" rows="2" placeholder="e.g. Malmö, Quan, 2024"
+          ></textarea>
+        </label>
+        <label
+          >Do you have a work contract now? If not, what is your current status?
+          <textarea name="contract"></textarea>
+        </label>
+        <label
+          >Legal or workplace problems you’ve had (past or present)?
+          <textarea name="problems"></textarea>
+        </label>
+        <label
+          >What kind of help do you need or wish existed today?
+          <textarea name="help"></textarea>
+        </label>
+        <label
+          >How did you find this site?
+          <textarea
+            name="source"
+            rows="2"
+            placeholder="Someone told me, Blog, Social media, etc."></textarea>
+        </label>
+        <label
+          >Would you like us to create a forum account for you in advance?
+          <select name="createAccount">
+            <option value="">Yes / No</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+        <button type="submit">Join the OB1 Forum</button>
+      </form>
+      <p style="margin-top: 2rem; font-size: 0.9rem; color: #999">
+        Disclaimer: We collect only the information needed to understand your
+        situation and provide access to the forum. No data is shared externally.
+        You can request full deletion anytime by contacting us.
+      </p>
+    </main>
+  </body>
+</html>
