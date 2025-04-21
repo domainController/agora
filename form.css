@@ -1,23 +1,26 @@
 body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  margin: 0;
-  padding: 2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #f9f9f9;
+  font-size: 15px;
+  color: #495057;
+  line-height: 1.6;
 }
+
+/* === TITRE PRINCIPAL === */
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #495057;
+}
+
 
 .container {
   max-width: 600px;
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
+
 
 .intro {
   margin-bottom: 2rem;
@@ -32,16 +35,25 @@ label {
 
 
 textarea {
-  min-height: 100px;
+  min-height: 80px;
+  resize: vertical;
 }
 
-button {
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #444;
-  color: #fff;
+button[type="submit"] {
+  background-color: #1c7ed6;
+  color: white;
   border: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 6px;
   cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1864ab;
 }
 
 button:hover {
@@ -58,25 +70,24 @@ button:hover {
 }
 
 /* CHAMP DE FORMULAIRE : un style sobre, lisible, sans bordure brutale */
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-select,
-textarea {
+
+
+input, textarea, select {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #f9f9f9;
   width: 100%;
-  padding: 10px 12px;
-  background-color: #f0f0eb; /* beige clair, doux */
   font-size: 14px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  color: #222; /* lisible mais doux */
-  border: none;  /* retirer la bordure par défaut */
-  border-radius: 8px;    /* arrondir les coins */
-  box-shadow: inset 0 0 0 1px #ddd; /* effet subtil si nécessaire */
-  margin-top: 0.3rem;
+  margin-bottom: 16px;
+  transition: border 0.2s;
 }
 
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #555;
+  background-color: #fff;
+}
 
 /* PLACEHOLDER UNIFIÉ */
 ::placeholder {
