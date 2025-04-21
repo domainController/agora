@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@form-validation/core": "^2.4.0",
+    "@form-validation/plugin-default-submit": "^2.4.0",
+    "@form-validation/plugin-submit-button": "^2.4.0",
+    "@form-validation/plugin-trigger": "^2.4.0",
+    "formvalidation": "^0.6.2-dev"
+  },
+  "name": "agora",
+  "version": "1.0.0",
+  "main": "validate.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^6.3.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

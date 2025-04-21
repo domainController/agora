@@ -2,62 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join the OB1 Forum</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
-  <script src="https://cdn.form.io/js/formio.embed.js"></script>
-  <link rel="stylesheet" href="form-style.css">
-  <style>
-    body {
-      background-color: #111;
-      color: white;
-      font-family: 'Helvetica Neue', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .container {
-      background-color: #1e1e1e;
-      padding: 2rem 2.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-      max-width: 600px;
-      width: 100%;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    #formio {
-      margin-top: 1rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OB1 – Pre-Registration</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+<!-- Minimal Reset CSS + Inter -->
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: #f0f0f0;
+    padding: 2rem;
+    line-height: 1.6;
+  }
+
+  input, textarea, select, button {
+    font-family: inherit;
+    padding: 0.5em;
+    border: 1px solid #555;
+    border-radius: 4px;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    background-color: #1a1a1a;
+    color: white;
+  }
+
+  button {
+    background-color: #3b82f6;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-top: 1rem;
+  }
+</style>
+  <!-- Style local -->
+  <link rel="stylesheet" href="form-style.css" />
+
+  <!-- FormValidation via CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@form-validation/core@1.10.0/dist/css/index.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@form-validation/core@1.10.0/dist/index.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@form-validation/plugin-submit-button@1.10.0/dist/index.umd.min.js"></script>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <nav style="text-align:center; margin-bottom:1.5rem;">
-        <a href="index.html">Access Request</a>
-        <a href="forum.html">Forum</a> 
-        <a href="https://www.aftershift.se">Blog</a> 
-        <a href="legal.html">Legal</a>
-      </nav>
-    </header>
-    <h1></i> Pre-Register for the OB1 Forum</h1>
-    <p class="intro-description">
-      This is a pre-registration form to help us better understand who you are and what you need. You’ll receive your access credentials once the platform opens.
-    </p>
-    <p class="intro">
-      <strong>OB1</strong> stands for <em>Obekväm arbetstid</em> in Swedish — or “inconvenient working hours” in English.
-      It refers to jobs with unstable schedules, unpredictable shifts, and working conditions that often go unseen or unspoken.
-      This space was created in the winter of 2024, in Malmö, Sweden, by a dishwasher who believed that no one should face abuse alone.
-      Whether you've been mistreated, silenced, or isolated — OB1 is here to help you be heard, and to find others who’ve been through the same.
-    </p>
-    <div id="formio"></div>
-    
-  </div>
-  <script src="form-config.js"></script>
+  <h1>OB1 – Pre-Registration</h1>
+
+  <form id="PreregistrationForm">
+    <div class="form-group">
+      <label for="fullName">Name*</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Use your first name or a pseudonym" />
+    </div>
+
+    <div class="form-group">
+      <label for="occupation">Role*</label>
+      <input type="text" id="occupation" name="occupation" placeholder="e.g., chef, waiter, cleaner" />
+    </div>
+
+    <div class="form-group">
+      <label for="nationality">Nationality*</label>
+      <input type="text" id="nationality" name="nationality" placeholder="e.g., Pakistani, Cameroonian" />
+    </div>
+
+    <div class="form-group">
+      <label for="help">What help do you seek?*</label>
+      <textarea id="help" name="help" placeholder="Please describe your expectations or support needs"></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="validate.js"></script>
 </body>
 </html>
