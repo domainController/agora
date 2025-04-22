@@ -1,0 +1,30 @@
+CLEVER_TOKEN=48e5c156536a47f9bccfb5d223c977b7
+CLEVER_SECRET=fkRhd3GKRqOiN7D5o.O98O6TGPK7CQkX
+
+Your application has been successfully created!
+ID: app_ba1dc022-6829-4dbc-b158-133d07526f44
+Name: ob1-forum
+
+
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set CC_PHP_WEBROOT public --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set APP_ENV production --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set LOG_CHANNEL stderr --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set APP_URL https://ob1.se/forum --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set DB_CONNECTION=mysql --app ob1-forum
+variable-name: undefined
+variable-value: missing value
+
+
+clever env set APP_ENV production --app ob1-forum
+clever env set LOG_CHANNEL stderr --app ob1-forum
+clever env set APP_URL https://ob1.se/forum --app ob1-forum
+clever env set DB_CONNECTION=mysql --app ob1-forum
+clever env set DB_HOST=your-db-host --app ob1-forum
+clever env set DB_PORT=3306 --app ob1-forum
+clever env set DB_DATABASE=your-database --app ob1-forum
+clever env set DB_USERNAME=your-username --app ob1-forum
+clever env set DB_PASSWORD=your-password --app ob1-forum
