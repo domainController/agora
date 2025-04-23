@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "app_id": "app_ba1dc022-6829-4dbc-b158-133d07526f44",
+      "org_id": "user_0433a92d-97e4-491a-b644-e757b561ed15",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_ba1dc022-6829-4dbc-b158-133d07526f44.git",
+      "git_ssh_url": "git+ssh://git@push-n3-par-clevercloud-customers.services.clever-cloud.com/app_ba1dc022-6829-4dbc-b158-133d07526f44.git",
+      "name": "ob1-forum",
+      "alias": "ob1-forum"
+    }
+  ]
+}

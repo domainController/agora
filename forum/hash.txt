@@ -1,1 +1,73 @@
-$2y$10$hMSPHFj/iWxWvmSR2pXg0uuecO8t4OT8uhx79CYkc8yEQo9gmbzXC
+CLEVER_TOKEN=48e5c156536a47f9bccfb5d223c977b7
+CLEVER_SECRET=fkRhd3GKRqOiN7D5o.O98O6TGPK7CQkX
+
+Your application has been successfully created!
+ID: app_ba1dc022-6829-4dbc-b158-133d07526f44
+Name: ob1-forum
+
+
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set CC_PHP_WEBROOT public --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set APP_ENV production --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set LOG_CHANNEL stderr --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set APP_URL https://ob1.se/forum --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set DB_CONNECTION=mysql --app ob1-forum
+variable-name: undefined
+variable-value: missing value
+
+
+
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set APP_URL https://ob1.se --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever env set CC_PHP_WEBROOT public --app ob1-forum
+Your environment variable has been successfully saved
+[macbookair@AirTallonM1] ~/Documents/agora/forum % 
+
+
+clever env set DB_CONNECTION=mysql --app ob1-forum
+clever env set DB_HOST=your-db-host --app ob1-forum
+clever env set DB_PORT=3306 --app ob1-forum
+clever env set DB_DATABASE=your-database --app ob1-forum
+clever env set DB_USERNAME=your-username --app ob1-forum
+clever env set DB_PASSWORD=your-password --app ob1-forum        
+
+[macbookair@AirTallonM1] ~/Documents/agora/forum % clever addon create mysql-addon ob1-mysql --plan dev
+Add-on created successfully!
+ID: addon_b8617380-2f86-4d81-8c3f-56490bf3806d
+Real ID: mysql_a1187962-bcc5-4964-a765-4d9a25e22f2d
+Name: ob1-mysql
+[macbookair@AirTallonM1] ~/Documents/agora/forum % 
+
+macbookair@AirTallonM1] ~/Documents/agora/forum % clever service link ob1-mysql --app ob1-forum
+Applications:
+Addons:
+  ob1-mysql (mysql_a1187962-bcc5-4964-a765-4d9a25e22f2d)
+[macbookair@AirTallonM1] ~/Documents/agora/forum % 
+
+[macbookair@AirTallonM1] ~/Documents/agora/forum % ssh-keygen -t rsa -b 4096 -C "noyau.imperatif@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/macbookair/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/macbookair/.ssh/id_rsa
+Your public key has been saved in /Users/macbookair/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:AlOCWMj+noUEQYVMHSjZoAxGrupuIQectoPVso39VGg noyau.imperatif@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|O&B+o .          |
+|@*o. o           |
+|=oo.o  .         |
+|o=o..oE .        |
+|+o+*....S        |
+|+++oo...         |
+|o.+ oo           |
+|.. o  .          |
+|oo               |
++----[SHA256]-----+
+[macbookair@AirTallonM1] ~/Documents/agora/forum % cat ~/.ssh/id_rsa.pub
+ssh-rsa     
+[macbookair@AirTallonM1] ~/Documents/agora/forum % 

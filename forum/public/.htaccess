@@ -1,5 +1,26 @@
 <IfModule mod_rewrite.c>
-  RewriteEngine on
+  RewriteEngine On
+
+  # Forum redirection
+  RewriteRule ^forum/(.*)$ /forum/index.php?$1 [QSA,L]
+
+  # Pages statiques
+  RewriteRule ^manifesto$ /manifesto.html [QSA,L]
+  RewriteRule ^form$ /form.html [QSA,L]
+  RewriteRule ^legal$ /legal.html [QSA,L]
+
+  # Par défaut : accueil
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# Block sensitive files
+<FilesMatch "^(\.env|\.htaccess|composer\.(json|lock))$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
 
   # Ensure the Authorization HTTP header is available to PHP
   RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
