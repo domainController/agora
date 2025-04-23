@@ -4,13 +4,12 @@
   # Forum redirection
   RewriteRule ^forum/(.*)$ /forum/index.php?$1 [QSA,L]
 
-  # Static page routing
-  RewriteRule ^legal$ /legal.html [QSA,L]
+  # Pages statiques
   RewriteRule ^manifesto$ /manifesto.html [QSA,L]
   RewriteRule ^form$ /form.html [QSA,L]
-  RewriteRule ^about$ /about.html [QSA,L]
+  RewriteRule ^legal$ /legal.html [QSA,L]
 
-  # Default fallback to homepage
+  # Par défaut : accueil
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [QSA,L]
