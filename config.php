@@ -15,7 +15,7 @@
     'engine' => 'InnoDB',
     'prefix_indexes' => true,
   ),
-  'url' => 'http://localhost:8888',
+  'url' => 'https://ob1.se',
   'paths' => 
   array (
     'api' => 'api',
